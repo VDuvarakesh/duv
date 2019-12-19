@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+public class Udrl{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String ar=sc.next();
+        char[] ch=ar.toCharArray();
+        int num=0;
+        for(int i=0;i<ch.length;i++){
+            if(ch[i]=='U'){
+                num++;
+            }
+            else if(ch[i]=='D'){
+                num--;
+            }
+            else if(ch[i]=='R'){
+                num++;
+            }
+            else if(ch[i]=='L'){
+                num--;
+            }
+        }
+        if(num==0){
+            System.out.println("True");
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+}
