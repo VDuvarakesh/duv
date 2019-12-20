@@ -11,7 +11,7 @@ public class Main{
                 c[i][j]=sc.nextInt();
             }
         }
-        //int x=0;
+        int x=0;
         int y=a-1;
         for(int i=0;i<a;i++){
             for(int j=0;j<b;j++){
