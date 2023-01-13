@@ -1,0 +1,57 @@
+import java.util.*;
+import java.io.*;
+public class integer{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the number");
+		int a=sc.nextInt();
+		int temp1;
+		int temp,aa,n;
+		String arg="";
+		int arr[]=new int[a];
+		int arry[]=new int[a];
+		System.out.println("Enter the number");
+		for(int i=0;i<a;i++){
+			arry[i]=sc.nextInt();
+		}
+		
+
+
+
+		
+	
+
+		for (int i = 1; i < a; i++) {
+			for (int j = i; j > 0; j--) {
+				while(arry[j]>0) 
+				{  
+					aa=arry[j]%10;  
+					arr[j]=arry[j]/10;  
+					arry[j]=arry[j]+(aa*aa*aa);
+					arr[j]=aa;  
+				}  
+			}
+		}
+
+
+
+			for (int i = 1; i < a; i++) {
+				for (int j = i; j > 0; j--) {
+					if (arr[j] < arr [j - 1]) {
+      						temp = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = temp;
+				}
+			}
+		}
+		
+
+
+
+		for(int i=a-1;i>=0;i--){
+			arg+=arr[i];			
+		}
+		
+		System.out.println(arg);
+	}
+}
