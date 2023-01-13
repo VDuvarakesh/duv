@@ -1,0 +1,35 @@
+import java.util.*;
+public class test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the First String");
+        String a = sc.nextLine();
+         System.out.println(a);
+        System.out.println("Enter the Second String");
+        String b = sc.nextLine();
+         System.out.println(b);
+        int c = a.length();
+        int d = b.length();
+        int j=0;
+        int count =d;
+        if(c == d){
+            char[] e = a.toCharArray();
+            char[] f = b.toCharArray();
+            for(int i = b.length() - 1;count>=1; i--) {
+                if(e[j] == f[i])
+                {
+                    f[i]=0;
+                    j = j + 1;
+                    count = count - 1;
+                   i = b.length();
+                }
+                           }
+        }
+        if(d == j) {
+          System.out.println("The given two string is a anagram");
+        }
+        else {
+            System.out.println("The given two string is not a anagram");
+        }
+    }
+}
